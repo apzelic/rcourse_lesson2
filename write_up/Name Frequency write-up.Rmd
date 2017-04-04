@@ -3,8 +3,8 @@ title: "Results from work RCourse lesson 2"
 author: "Alan P Zelicoff"
 date: "April 3, 2017"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r, echo=FALSE}
