@@ -1,0 +1,39 @@
+---
+title: "Results from work RCourse lesson 2"
+author: "Alan P Zelicoff"
+date: "April 3, 2017"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r, echo=FALSE}
+load("rcourse_lesson2_environment.RData")
+
+
+```
+
+
+# Introduction
+Here we will present some of the results of the frequency of the name *Page* over time.
+
+
+
+# Results
+
+
+## Prevalence by Year
+Below is a plot for how the proprtion of people with the name "Page" (log base 10 transformed) has changed over time.  Overall the trend is pretty flat, with maybe a slight increase over tiem
+
+```{r, fig.align = 'center', echo=FALSE}
+year.plot
+```
+
+
+## Prevalence by Sex 
+And now by sex.
+
+```{r, fig.align = 'center', echo=FALSE}
+sex.plot
+```
+
