@@ -3,6 +3,7 @@ library(dpl)
 ## READ IN DATA ####
 
 load(file = "data/babynames.R")
+data <- babynames
 
 ## CLEAN DATA ####
 data_clean= data %>%
