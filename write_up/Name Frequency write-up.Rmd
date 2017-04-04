@@ -31,7 +31,7 @@ year.plot
 
 
 ## Prevalence by Sex 
-And now by sex.
+And now by sex we can see how the name 'Page' is prefered by sex.
 
 ```{r, fig.align = 'center', echo=FALSE}
 sex.plot
