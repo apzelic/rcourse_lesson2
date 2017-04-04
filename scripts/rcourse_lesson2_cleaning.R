@@ -1,4 +1,4 @@
-library(dplyr)
+library(dpl)
 
 ## READ IN DATA ####
 
@@ -15,3 +15,5 @@ data_clean = data %>%
     filter(year > 1900) %>%
     filter(year <= 2000)
 
+min(data_clean$year)
+max(data_clean$year)
