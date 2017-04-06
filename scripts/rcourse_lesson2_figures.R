@@ -17,7 +17,7 @@ name.plot
 # dev.off()
 
 data_clean <- data %>%
-    filter(name == "Page") %>%
+    filter(name == "Alan") %>%
     mutate(name = factor(name)) %>%
     filter(year>1900) %>%
     filter(year<=2000) %>%
