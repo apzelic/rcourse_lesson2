@@ -12,12 +12,12 @@ data_figs = data_clean
 name.plot = ggplot(data_figs, aes(x = prop)) +
     geom_histogram()
 
-# pdf("figures/name.pdf")
+pdf("figures/name.pdf")
 name.plot
-# dev.off()
+dev.off()
 
 data_clean <- data %>%
-    filter(name == "Alan") %>%
+    filter(name == "Page") %>%
     mutate(name = factor(name)) %>%
     filter(year>1900) %>%
     filter(year<=2000) %>%
@@ -25,10 +25,17 @@ data_clean <- data %>%
     mutate(prop_log10 = log10(prop))
 
 name_loge.plot = ggplot(data_clean, aes(x=prop_loge)) + 
-    geom_histogram(bins=50)
+    geom_histogram()
 
 name_log10.plot = ggplot(data_clean, aes(x=prop_log10)) + 
     geom_histogram(bins=50)
+
+pdf("figures/name_loge.pdf")
+name_loge.plot
+dev.off()
+pdf("figures/name_log10.pdf")
+name_log10.plot
+dev.off()
 
 year.plot<- ggplot(data_clean, aes(x=year, y = prop_log10)) + 
     geom_point() +
@@ -37,9 +44,17 @@ year.plot<- ggplot(data_clean, aes(x=year, y = prop_log10)) +
 sex.plot <- ggplot(data_clean, aes(x=sex, y = prop_log10)) + 
     geom_boxplot()
 
+pdf("figures/sex.pdf")
+sex.plot
+dev.off()
+pdf("figures/year.pdf")
+year.plot
+dev.off()
+
 data_figs = data_clean %>%
     mutate(sex = factor(sex, levels=c("F", "M"), labels=c("female", "male")))
 
 sex.plot <- ggplot(data_figs, aes(x=sex, y = prop_log10)) + 
     geom_boxplot()
 
+name_loge.plot
