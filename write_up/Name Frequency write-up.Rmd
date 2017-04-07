@@ -3,19 +3,26 @@ title: "Results from work RCourse lesson 2"
 author: "Alan P Zelicoff"
 date: "April 3, 2017"
 output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 
 ```{r, echo=FALSE}
-load("rcourse_lesson2_environment.RData")
+load("rcourse_lesson2_environment.RData")    #This loads in all of the objects in the environment
+library(ggplot2)
 
 
 ```
 
 
 # Introduction
-Here we will present some of the results of the frequency of the name *Page* over time.
+Here we will present some of the results of the frequency of the name *Page* over time.  Let's see if we can display just the head of some of the data
+
+```{r, echo=FALSE, results = 'as is'}
+head(data_clean)
+knitr::kable(head(data_clean), format = "html", digits = 2)
+```
+
 
 
 
@@ -25,7 +32,7 @@ Here we will present some of the results of the frequency of the name *Page* ove
 ## Prevalence by Year
 Below is a plot for how the proprtion of people with the name "Page" (log base 10 transformed) has changed over time.  Overall the trend is pretty flat, with maybe a slight increase over tiem
 
-```{r, fig.align = 'center', echo=FALSE}
+```{r, echo=FALSE}
 year.plot
 ```
 
